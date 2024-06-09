@@ -1,122 +1,190 @@
-body {
-    background-color: #121212;
-    color: #FFFFFF;
-    font-family: Arial, sans-serif;
+/* Reset de estilos */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
 header {
-    background-color: #1F1F1F;
+    background-color: #333;
+    color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .forum-title {
     margin: 0;
 }
 
-.container {
+.user-profile {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 50px;
+    align-items: center;
+}
+
+.user-name {
+    margin-right: 10px;
+}
+
+.rank-title {
+    margin-right: 10px;
+}
+
+.exp-bar {
+    width: 150px;
+    height: 10px;
+    background-color: #666;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.exp-progress {
+    height: 100%;
+    background-color: #1E90FF;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
 }
 
 .side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
     width: 250px;
-    background-color: #333333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-right: 20px;
-    display: none;
+    height: 100vh;
+    background-color: #333;
+    padding-top: 100px;
+    transition: left 0.3s ease;
 }
 
 .side-menu.active {
-    display: block;
+    left: 0;
 }
 
-.side-menu-header {
-    padding: 10px;
-    border-bottom: 1px solid #555555;
-}
-
-.side-menu-header h2 {
-    margin: 0;
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 
 .side-menu-content ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 .side-menu-content ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #555555;
-}
-
-.side-menu-content ul li:last-child {
-    border-bottom: none;
+    margin-bottom: 10px;
 }
 
 .side-menu-content ul li a {
-    text-decoration: none;
-    color: #FFFFFF;
     display: block;
     padding: 10px;
+    color: #fff;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .side-menu-content ul li a:hover {
-    background-color: #444444;
+    background-color: #444;
 }
 
 .content {
-    flex: 1;
-    max-width: 600px;
-    background-color: #1F1F1F;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
     padding: 20px;
-    margin-right: 20px;
+    margin-top: 20px;
 }
 
-.menu-button {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 20px;
-    background: none;
-    border: none;
-    color: #FFFFFF;
-    cursor: pointer;
-    z-index: 999;
+.post-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.close-button {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-    background: none;
-    border: none;
-    color: #FFFFFF;
-    cursor: pointer;
-    z-index: 999;
+.post-form input,
+.post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.action-button {
-    background-color: #1E90FF;
-    color: white;
+.post-form button {
+    background-color: #333;
+    color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
-.action-button:hover {
-    background-color: #007bff;
+.post-form button:hover {
+    background-color: #444;
+}
+
+#projects {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-menu-header {
+    padding: 20px;
+    background-color: #1E90FF;
+    color: #fff;
+    text-align: center;
+}
+
+.user-profile {
+    margin-bottom: 20px;
+}
+
+.exp-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #666;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.exp-progress {
+    height: 100%;
+    background-color: #1E90FF;
+    border-radius: 5px;
 }
