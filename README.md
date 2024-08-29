@@ -1,2 +1,2 @@
 # Flightsm
-This repository isso for study.
+This repository is for study.
